@@ -30,8 +30,11 @@ header {
     text-align: center;
     background-image: url(https://unsplash.it/3500);
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
+    -moz-background-size: cover;
+-webkit-background-size: cover;
+-o-background-size: cover;
+background-position: center center; 
 
 
 }
@@ -133,6 +136,13 @@ main {
     .text-hero-portfolio h1 {
         font-size: 3rem;
     }
+    .text-hero-portfolio {
+    min-height: 80vh;
+}
+.hero-portfolio{
+    
+    background-image: url(https://unsplash.it/1500);
+}
     
   }
   
