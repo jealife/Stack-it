@@ -10,7 +10,15 @@
     --primary: #44b9d4;
     --secondary: #140959;
 }
+body::-webkit-scrollbar {
+    width: 0.2rem;
+    background-color: #f6fcff;
+}
 
+body::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background: #140959;
+}
 header {
     display: flex;
     align-items: center;
@@ -32,9 +40,9 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     -moz-background-size: cover;
--webkit-background-size: cover;
--o-background-size: cover;
-background-position: center center; 
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-position: center center;
 
 
 }
@@ -78,12 +86,17 @@ main {
     padding: 0 1rem;
     width: 100%;
     display: flex;
+    flex-direction: column;
+    gap:35px;
     justify-content: center;
     align-items: center;
 }
+.last-project h2{
+    color: #263238;
+}
 
 .card h3 {
-    color: #263238;
+    color: #edf9ff;
 }
 
 .card span {
@@ -91,12 +104,20 @@ main {
 }
 
 .cards-project-container {
+    width: 100%;
+    background-color: #141a1d;
+    padding: 1rem 2rem;
+    border-radius: 23px;
     column-width: auto;
+    column-gap: 20px;
     column-count: 4;
+    margin-bottom: 5rem;
 
 }
 
-.card {}
+.card-container{
+    padding-top: 2rem !important;
+}
 
 .cards-project-container .card img {
 
@@ -104,6 +125,13 @@ main {
     height: 300px;
     border-radius: 23px;
     object-fit: cover;
+}
+.content{
+    display: flex;
+    gap: 20px;
+}
+.content div:nth-child(-n+2){
+    flex: 1;
 }
 
 @media (max-width: 768px) and (max-width: 1024px) {
@@ -115,34 +143,43 @@ main {
     }
 
 }
+
 @media (max-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  
+
     .cards-project-container {
         column-width: auto;
         column-count: 2;
 
     }
-    
 
-    
-  }
-  @media (max-width: 481px) and (max-width: 767px) {
-  
+
+
+}
+
+@media (max-width: 481px) and (max-width: 767px) {
+
     .cards-project-container {
         column-width: auto;
         column-count: 1;
+        padding: 1.5rem 2rem;
 
     }
+
     .text-hero-portfolio h1 {
         font-size: 3rem;
     }
-    .hero-portfolio,.text-hero-portfolio {
-    min-height: 80vh;
+
+    .hero-portfolio,
+    .text-hero-portfolio {
+        min-height: 80vh;
+    }
+
+    .hero-portfolio {
+
+        background-image: url(https://unsplash.it/1500);
+    }
+    .content{
+        flex-direction: column;
+    }
+
 }
-.hero-portfolio{
-    
-    background-image: url(https://unsplash.it/1500);
-}
-    
-  }
-  
