@@ -136,7 +136,7 @@ main {
     .text-hero-portfolio h1 {
         font-size: 3rem;
     }
-    .text-hero-portfolio {
+    .hero-portfolio,.text-hero-portfolio {
     min-height: 80vh;
 }
 .hero-portfolio{
